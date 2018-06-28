@@ -8,12 +8,6 @@ There are 3 things that it does:
 2. Creating a JS Class in C++
 3. Adding ES6 Module resolution.
 
-Right now it dumps core when it exits, but it executes the script
-successfully. The core dump happens because there's a global static
-map for the modules that gets destroyed after the JS environment has
-already been cleaned up.  I can't find any documentation on how to free JS::Heap pointers
-
-
 Building it, you need a built version of SpiderMonkey ESR60.  If you
 are using a debug build, add -DJSAPI_DEBUG
 
